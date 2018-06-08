@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.example.application.myinfo.MyinfoFragment;
 import com.example.application.news.NewsFragment;
 import com.example.application.utils.AnalyslsUtils;
-import com.example.application.video.VideoFragment;
+import com.example.application.book.BookFragment;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
@@ -26,9 +26,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private TextView bottom_bar_text_news;
     private ImageView bottom_bar_image_news;
     private RelativeLayout bottom_bar_news_btn;
-    private TextView bottom_bar_text_video;
-    private ImageView bottom_bar_image_video;
-    private RelativeLayout bottom_bar_video_btn;
+    private TextView bottom_bar_text_book;
+    private ImageView bottom_bar_image_book;
+    private RelativeLayout bottom_bar_book_btn;
     private TextView bottom_bar_text_myinfo;
     private ImageView bottom_bar_image_myinfo;
     private RelativeLayout bottom_bar_myinfo_btn;
@@ -56,16 +56,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         bottom_bar_text_news = (TextView) findViewById(R.id.bottom_bar_text_news);
         bottom_bar_image_news = (ImageView) findViewById(R.id.bottom_bar_image_news);
         bottom_bar_news_btn = (RelativeLayout) findViewById(R.id.bottom_bar_news_btn);
-        bottom_bar_text_video = (TextView) findViewById(R.id.bottom_bar_text_video);
-        bottom_bar_image_video = (ImageView) findViewById(R.id.bottom_bar_image_video);
-        bottom_bar_video_btn = (RelativeLayout) findViewById(R.id.bottom_bar_video_btn);
+        bottom_bar_text_book = (TextView) findViewById(R.id.bottom_bar_text_book);
+        bottom_bar_image_book = (ImageView) findViewById(R.id.bottom_bar_image_book);
+        bottom_bar_book_btn = (RelativeLayout) findViewById(R.id.bottom_bar_book_btn);
         bottom_bar_text_myinfo = (TextView) findViewById(R.id.bottom_bar_text_myinfo);
         bottom_bar_image_myinfo = (ImageView) findViewById(R.id.bottom_bar_image_myinfo);
         bottom_bar_myinfo_btn = (RelativeLayout) findViewById(R.id.bottom_bar_myinfo_btn);
         main_bottom_bar = (LinearLayout) findViewById(R.id.main_bottom_bar);
 
         bottom_bar_news_btn.setOnClickListener(this);
-        bottom_bar_video_btn.setOnClickListener(this);
+        bottom_bar_book_btn.setOnClickListener(this);
         bottom_bar_myinfo_btn.setOnClickListener(this);
     }
 
@@ -75,15 +75,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 bottom_bar_image_news.setImageResource(R.drawable.main_news_icon_selected);
                 bottom_bar_text_news.setTextColor(Color.parseColor("#0097F7"));
 
-                bottom_bar_image_video.setImageResource(R.drawable.main_video_icon);
-                bottom_bar_text_video.setTextColor(Color.parseColor("#666666"));
+                bottom_bar_image_book.setImageResource(R.drawable.main_video_icon);
+                bottom_bar_text_book.setTextColor(Color.parseColor("#666666"));
 
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_my_icon);
                 bottom_bar_text_myinfo.setTextColor(Color.parseColor("#666666"));
                 break;
             case 1:
-                bottom_bar_image_video.setImageResource(R.drawable.main_video_icon_selected);
-                bottom_bar_text_video.setTextColor(Color.parseColor("#0097F7"));
+                bottom_bar_image_book.setImageResource(R.drawable.main_video_icon_selected);
+                bottom_bar_text_book.setTextColor(Color.parseColor("#0097F7"));
 
                 bottom_bar_image_news.setImageResource(R.drawable.main_news_icon);
                 bottom_bar_text_news.setTextColor(Color.parseColor("#666666"));
@@ -98,8 +98,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 bottom_bar_image_news.setImageResource(R.drawable.main_news_icon);
                 bottom_bar_text_news.setTextColor(Color.parseColor("#666666"));
 
-                bottom_bar_image_video.setImageResource(R.drawable.main_video_icon);
-                bottom_bar_text_video.setTextColor(Color.parseColor("#666666"));
+                bottom_bar_image_book.setImageResource(R.drawable.main_video_icon);
+                bottom_bar_text_book.setTextColor(Color.parseColor("#666666"));
                 break;
         }
     }
@@ -111,8 +111,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_body,new NewsFragment()).commit();
                 setSelectStatus(0);
                 break;
-            case R.id.bottom_bar_video_btn:
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_body,new VideoFragment()).commit();
+            case R.id.bottom_bar_book_btn:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_body,new BookFragment()).commit();
                 setSelectStatus(1);
                 break;
             case R.id.bottom_bar_myinfo_btn:
@@ -136,7 +136,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             }
         }
         if(requestCode==000){
-            this.getSupportFragmentManager().beginTransaction().replace(R.id.main_body,new VideoFragment()).commit();
+            this.getSupportFragmentManager().beginTransaction().replace(R.id.main_body,new BookFragment()).commit();
             setSelectStatus(1);
         }
     }

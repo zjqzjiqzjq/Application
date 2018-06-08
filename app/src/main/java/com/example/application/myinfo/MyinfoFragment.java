@@ -22,8 +22,6 @@ public class MyinfoFragment extends Fragment implements View.OnClickListener  {
     private ImageView iv_head_icon;
     private TextView tv_user_name;
     private LinearLayout ll_head;
-    private ImageView iv_video_historyicon;
-    private RelativeLayout rl_video_history;
     private ImageView iv_userinfo_icon;
     private RelativeLayout rl_setting;
 
@@ -40,8 +38,6 @@ public class MyinfoFragment extends Fragment implements View.OnClickListener  {
         ll_head = (LinearLayout) view.findViewById(R.id.ll_head);
         iv_head_icon = (ImageView) view.findViewById(R.id.iv_head_icon);
         tv_user_name = (TextView) view.findViewById(R.id.tv_user_name);
-        rl_video_history = (RelativeLayout) view.findViewById(R.id.rl_video_history);
-        iv_video_historyicon = (ImageView) view.findViewById(R.id.iv_video_historyicon);
         rl_setting = (RelativeLayout) view.findViewById(R.id.rl_setting);
         iv_userinfo_icon = (ImageView) view.findViewById(R.id.iv_userinfo_icon);
 
@@ -52,7 +48,6 @@ public class MyinfoFragment extends Fragment implements View.OnClickListener  {
         }
 
         ll_head.setOnClickListener(this);
-        rl_video_history.setOnClickListener(this);
         rl_setting.setOnClickListener(this);
     }
 
@@ -69,15 +64,6 @@ public class MyinfoFragment extends Fragment implements View.OnClickListener  {
                     //跳转到登录界面
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
                     getActivity().startActivityForResult(intent,1);
-                }
-                break;
-            case R.id.rl_video_history:
-                if (AnalyslsUtils.readLoginStatus(getActivity())){
-                    //跳转到播放记录界面
-                    Intent intent = new Intent(getActivity(), PlayHistoryActivity.class);
-                    getActivity().startActivity(intent);
-                }else {
-                    Toast.makeText(getActivity(),"您未登录，请先登录",Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.rl_setting:
