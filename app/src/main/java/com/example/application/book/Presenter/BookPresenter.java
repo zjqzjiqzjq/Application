@@ -19,9 +19,9 @@ public class BookPresenter implements IBookPresenter,IOnLoadListener {
         this.iBookModel = new BookModel();
     }
     @Override
-    public void loadBook(String name,int id) {
+    public void loadBook(String name) {
         iBookView.showDialog();
-        iBookModel.loadBook(name,id,this);
+        iBookModel.loadBook(name,this);
     }
 
     @Override

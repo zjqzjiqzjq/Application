@@ -5,5 +5,5 @@ package com.example.application.book.Model;
  */
 
 public interface IBookModel {
-    void loadBook(String name,int id,IOnLoadListener iOnLoadListener);
+    void loadBook(String name,IOnLoadListener iOnLoadListener);
 }

@@ -14,7 +14,7 @@ import rx.schedulers.Schedulers;
 
 public class BookModel implements IBookModel{
     @Override
-    public void loadBook(final String name,final int id,final IOnLoadListener iOnLoadListener) {
+    public void loadBook(final String name,final IOnLoadListener iOnLoadListener) {
         RetrofitHelper retrofitHelper = new RetrofitHelper(Api.Book_HOST);
         //enqueue异步请求
         retrofitHelper.getBook(name)

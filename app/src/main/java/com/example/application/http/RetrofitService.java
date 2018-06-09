@@ -18,6 +18,7 @@ public interface RetrofitService {
                                  @Path("id") String id,
                                  @Path("startPage") int startPage);
 
-    @GET("/v2/book/{name}")
-    Observable<BookBean> getBook(@Path("name") String name);
+    @GET("/v2/book/search")
+    Observable<BookBean> getBook(@Query("q") String name
+                                 /*@Query("fields") String what*/);
 }

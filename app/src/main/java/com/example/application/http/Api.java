@@ -10,8 +10,12 @@ public class Api {
     public static final String HEADLINE_ID = "T1348647909107";
     //书籍
     public static final String Book_HOST = "https://api.douban.com";
-    public static final String FIRST_NAME = "search?q=金瓶梅";
+    /*public static final String FIRST_NAME = "search?q=金瓶梅";
     public static final String SECOND_NAME = "search?q=红楼梦";
     public static final String THIRD_NAME = "search?q=水浒传";
-    public static final String FOURTH_NAME = "search?q=盗墓笔记";
+    public static final String FOURTH_NAME = "search?q=盗墓笔记";*/
+
+    public static final String Book_NAME = "名著";
+    //public static final String BOOK_WHAT = "id,title,images,subtitle,author,publisher,url";
+
 }

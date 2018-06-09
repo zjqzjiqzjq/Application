@@ -5,5 +5,5 @@ package com.example.application.book.Presenter;
  */
 
 public interface IBookPresenter {
-    void loadBook(String name,int id);
+    void loadBook(String name);
 }

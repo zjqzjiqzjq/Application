@@ -75,14 +75,14 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 bottom_bar_image_news.setImageResource(R.drawable.main_news_icon_selected);
                 bottom_bar_text_news.setTextColor(Color.parseColor("#0097F7"));
 
-                bottom_bar_image_book.setImageResource(R.drawable.main_video_icon);
+                bottom_bar_image_book.setImageResource(R.drawable.main_book_icon);
                 bottom_bar_text_book.setTextColor(Color.parseColor("#666666"));
 
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_my_icon);
                 bottom_bar_text_myinfo.setTextColor(Color.parseColor("#666666"));
                 break;
             case 1:
-                bottom_bar_image_book.setImageResource(R.drawable.main_video_icon_selected);
+                bottom_bar_image_book.setImageResource(R.drawable.main_book_icon_selected);
                 bottom_bar_text_book.setTextColor(Color.parseColor("#0097F7"));
 
                 bottom_bar_image_news.setImageResource(R.drawable.main_news_icon);
@@ -98,7 +98,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 bottom_bar_image_news.setImageResource(R.drawable.main_news_icon);
                 bottom_bar_text_news.setTextColor(Color.parseColor("#666666"));
 
-                bottom_bar_image_book.setImageResource(R.drawable.main_video_icon);
+                bottom_bar_image_book.setImageResource(R.drawable.main_book_icon);
                 bottom_bar_text_book.setTextColor(Color.parseColor("#666666"));
                 break;
         }

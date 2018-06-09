@@ -53,8 +53,15 @@ public class ItemBookAdapter extends RecyclerView.Adapter<ItemBookAdapter.ViewHo
                 .into(holder.ivBook);
 
         holder.tvBookTitle.setText(bean.getTitle());
-
-        holder.tvBookAuthor.setText("作者：" + bean.getAuthor().get(0));
+        String author="";
+        for(int i=0;i<bean.getAuthor().size();i++){
+            if (i==bean.getAuthor().size()-1){
+                author+=bean.getAuthor().get(i);
+            }else{
+                author+=bean.getAuthor().get(i)+"/";
+            }
+        }
+        holder.tvBookAuthor.setText("作者：" + author);
 
         holder.tvBookSubtitle.setText(bean.getSubtitle());
 
